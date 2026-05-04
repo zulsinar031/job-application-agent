@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  job-agent:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./outputs:/app/outputs
+    stdin_open: true
+    tty: true
